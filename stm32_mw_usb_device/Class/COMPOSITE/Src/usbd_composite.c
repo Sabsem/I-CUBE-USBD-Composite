@@ -1095,7 +1095,7 @@ void USBD_COMPOSITE_Mount_Class(void)
                            interface_no_track,
                            interface_no_track + 1,
                            in_ep_track,
-                           in_ep_track + 1,
+                           in_ep_track + USBD_CDC_ACM_COUNT,
                            out_ep_track,
                            USBD_Track_String_Index);
   memcpy(USBD_COMPOSITE_FSCfgDesc.USBD_CDC_ACM_DESC, ptr + 0x09, len - 0x09);
@@ -1105,7 +1105,7 @@ void USBD_COMPOSITE_Mount_Class(void)
                            interface_no_track,
                            interface_no_track + 1,
                            in_ep_track,
-                           in_ep_track + 1,
+                           in_ep_track + USBD_CDC_ACM_COUNT,
                            out_ep_track,
                            USBD_Track_String_Index);
   memcpy(USBD_COMPOSITE_HSCfgDesc.USBD_CDC_ACM_DESC, ptr + 0x09, len - 0x09);
